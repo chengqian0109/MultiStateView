@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100"
+        android:src="@mipmap/ic_error" />
+
+    <TextView
+        android:id="@+id/tv_status_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_40"
+        android:lineSpacingExtra="@dimen/dp_5"
+        android:padding="@dimen/dp_8"
+        android:text="加载出错，点击刷新"
+        android:textColor="#666666"
+        android:textSize="@dimen/font_14sp" />
+</LinearLayout>

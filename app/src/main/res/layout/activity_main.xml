@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="content"
+        android:onClick="showContentView"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="empty"
+        android:onClick="showEmptyView"
+        app:layout_constraintLeft_toRightOf="@id/btn_content"/>
+
+    <Button
+        android:id="@+id/btn_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="error"
+        android:onClick="showErrorView"
+        app:layout_constraintLeft_toRightOf="@id/btn_empty"/>
+
+    <Button
+        android:id="@+id/btn_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="loading"
+        android:onClick="showLoadingView"
+        app:layout_constraintLeft_toRightOf="@id/btn_error"/>
+
+    <com.jack.view.MultiStateView
+        android:id="@+id/state_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_content"
+        app:msv_animateViewChanges="false"
+        app:msv_emptyView="@layout/view_empty"
+        app:msv_errorView="@layout/view_error"
+        app:msv_loadingView="@layout/view_loading"
+        app:msv_viewState="content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="展示数据"/>
+    </com.jack.view.MultiStateView>
+
+</android.support.constraint.ConstraintLayout>
